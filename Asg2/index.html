@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdYoda Stories | Blog Page</title>
+    <style>
+        *{
+            scroll-behavior: smooth;
+        }
+        a{
+            text-decoration: none;            
+        }
+        
+        header{
+            padding: 16px 78px;
+            background-color:  #fff;
+            display: flex;
+            /* border: 2px solid red; */
+            justify-content: space-between;      
+            /* position: fixed;       */
+            width: 1090px;
+            /* margin-top: 0px; */
+            margin-bottom: 5px;
+        }
+        .header_btn{
+            background-color: 0050FF;
+            font-weight: bold;
+            
+            border: 0px;
+            border-radius: 20px 20px 20px 20px;
+            width: 180px;
+            height: 60px;
+        }
+        .header_btn > a{
+            text-decoration: none;
+            color: white;
+        }
+        header > div{
+            display: flex;
+            justify-content: space-between;
+            /* border: 2px solid green; */
+            /* width: 30%; */
+        }
+        #leftHeader{
+            width: 30%;
+        }
+        #rightHeader{
+            width: 50%;
+        }
+        #rightHeader > p{
+            color: gray;
+        }
+        .logo{
+            width: 130px;
+            font-size: 32px;
+            color: #0084ff;
+            margin-bottom: 0px;
+            font-weight: bold;
+        }
+        .logoStoriesText{
+            margin: 0px;
+            font-weight: 500px;
+            font-family: 'Raleway', sans-serif;
+            font-style: italic;
+        }
+        #dropDownText{
+            color: #000;
+            border: 0px;
+            /* padding: 8px; */
+            cursor: pointer;
+        }
+        .dropDownIcon{
+            padding-top: 0px;
+            padding-left: 8px;
+        }
+        section{
+            /* margin-top: 80px; */
+            background-color: F2F6FF;     
+        }
+        
+        #heading{
+           color: #000;
+           font-weight: 600;
+           margin: 0px;
+        }
+        .categoriesContainer{
+            margin-bottom: 20px;
+            font-size: 16px;
+            padding-top: 16px;
+            text-align: center;
+        }
+/*
+Categories container:
+Bottom margin: 20px;
+Text size: 16px;
+Top padding: 16px
+*/
+        footer{
+            background-color: #172146;
+            padding: 80px 16%;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8738d4fceb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+            <div id="leftHeader">
+                 <div> 
+                     <a href="#"class="logo">EDYODA</a> <br/>
+                     <span class="logoStoriesText">Stories</span>
+                 </div>     
+                <select name="" id="dropDownText">
+                    <option value="" class="dropDownIcon">Explore Categories</option>
+                    <option value="" class="dropDownIcon">Explore Categories</option>
+                    <option value="" class="dropDownIcon">Explore Categories</option>
+                    <option value="" class="dropDownIcon">Explore Categories</option>
+                </select>
+          </div>
+          <div id="rightHeader">
+               <p>EdYoda is free learning and knowledge <br/>
+                    sharing platform for techies</p>
+               <button class="header_btn"><a href="https://www.edyoda.com/home">Go To Main Website</a></button>
+          </div>         
+    </header>
+    <!-- section -->
+    <section>
+        <h1 >Categories</h1>
+        <h1 id="heading">Trending Posts1</h1>
+        <!-- <i class="fa-solid fa-filter"></i> -->
+        <div class="categoriesContainer">
+            <div><i class="fa-solid fa-filter"></i><span>Filter by Category</span></div>
+        </div>
+        
+    </section>
+    <!-- footer -->
+    <footer> </footer>
+</body>
+</html>
