@@ -25,8 +25,7 @@
         }
         .header_btn{
             background-color: 0050FF;
-            font-weight: bold;
-            
+            font-weight: bold;            
             border: 0px;
             border-radius: 20px 20px 20px 20px;
             width: 180px;
@@ -60,7 +59,7 @@
         }
         .logoStoriesText{
             margin: 0px;
-            font-weight: 500px;
+            font-weight: 500;
             font-family: 'Raleway', sans-serif;
             font-style: italic;
         }
@@ -84,17 +83,100 @@
            font-weight: 600;
            margin: 0px;
         }
+        /* .filter{
+            margin-left: 50px;
+        } */
+        .filter > span {
+            margin-left: 5px;
+        }
         .categoriesContainer{
             margin-bottom: 20px;
             font-size: 16px;
             padding-top: 16px;
-            text-align: center;
+            /* text-align: center; */
+            /* border: 2px solid red; */
+        }
+        .catego{
+            display: flex; 
+            /* width: min-content; */
+            /* border: 2px solid yellow;  */
+            padding: 0px;                      
+        }
+        .catego > li {
+           margin: 5px;
+           padding: 6px 14px;
+           width:auto;
+           color: #0084ff;
+           border-radius: 15px;
+           border: 1px solid #0084ff;
+           margin: 5px;
+           cursor: pointer;
+        }
+        .active{
+            color: #fff !important;
+            background-color: #0084ff;
+        }
+        /* Item */
+        .frame{
+            /* border:2px solid red; */
+            padding: 2px;
+        }
+        .box{
+            display: flex;
+            /* border: 3px solid yellow; */
+        }
+        .item{
+            width: 33.3%;
+            margin: 1%;
+            cursor: pointer;
+            /* border:2px solid peru; */
+        }
+        .imageSection{
+            height: 176px;
+            width: 100%;
+            /* border:2px solid yellow; */
+        }
+        .image{
+            /* height: 100%; */
+            width: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            /* border:2px solid blue; */
+        }
+        .textSection{
+            padding:10px 24px;
+            background-color: #fff;
+            /* border:2px solid red; */
+        }
+        .title{
+            font-size: 18px;
+            text-align: left;
+            margin: 0px;
+            font-weight: 600;            
+        }
+        .authorContainer{            
+            padding-top: 4px;
+            /* border:2px solid magenta; */
+        }
+        .author{
+            color: #0096ff;
+            font-size: 14px;
+            font-style: italic;
+            font-weight: 500;
+            /* border:2px solid olive; */
+        }
+        .date{
+            color: rgba(0,0,0,0.7);
+            font-size: 14px;
+            font-weight: 300;
+            /* border:2px solid teal; */
+        }
+        .data{
+            /* border:2px solid black; */
+            color: gray;            
         }
 /*
-Categories container:
-Bottom margin: 20px;
-Text size: 16px;
-Top padding: 16px
+
 */
         footer{
             background-color: #172146;
@@ -109,7 +191,7 @@ Top padding: 16px
 <body>
     <!-- header -->
     <header>
-            <div id="leftHeader">
+          <div id="leftHeader">
                  <div> 
                      <a href="#"class="logo">EDYODA</a> <br/>
                      <span class="logoStoriesText">Stories</span>
@@ -129,13 +211,159 @@ Top padding: 16px
     </header>
     <!-- section -->
     <section>
-        <h1 >Categories</h1>
         <h1 id="heading">Trending Posts1</h1>
         <!-- <i class="fa-solid fa-filter"></i> -->
         <div class="categoriesContainer">
-            <div><i class="fa-solid fa-filter"></i><span>Filter by Category</span></div>
+            <div class="filter">
+                <i class="fa-solid fa-filter"></i>
+                <span>Filter by Category</span>
+            </div>
+            <div>
+                <ul type="none" class="catego">
+                    <li class="active">All</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Cloud Computing</li>
+                    <li>DevOps</li>
+                    <li>Programming Languages</li>
+                    <li>Mobile Application Development</li>
+                    <li>Technology and Tools</li>
+                    
+                </ul>
+                <ul type="none" class="catego ">
+                    <li>Get a Job in Tech Company</li>
+                    <li>Others</li>
+                </ul>
+            </div>
         </div>
-        
+        <!-- Itens -->
+        <div class="frame">
+          <div class="box">
+            <div class="item">
+                <div class="imgSection">
+                    <img class="image" alt="Machine Learning" src="https://edyoda.s3.amazonaws.com/media/blog-images/learn_machine_learning_courses_online.png"/>
+                </div>
+                <div class="textSection">
+                    <p class="title">Introduction To A Machine Learning</p>
+                    <div class="authorContainer">
+                        <span class="author">EdYoda</span> |
+                        <span class="date">23 Aug 2019</span>
+                    </div>
+                    <p class="data">We have had an insight into Artificial Intelligence. Well, one of its subfields is machine learning and this</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="imgSection">
+                    <img class="image" alt="lamp Vs stack" src="https://edyoda.s3.amazonaws.com/media/blog-images/learn_machine_learning_courses_online.png"  />
+                </div>
+                <div class="textSection">
+                    <p class="title">LAMP Stack Vs MEAN stack:</p>
+                    <div class="authorContainer">
+                        <span class="author">EdYoda</span> |
+                        <span class="date">24 Aug 2019</span>
+                    </div>
+                    <p class="data">In today’s dynamic world, developing a rapid application with a smooth user interface that can adapt to</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="imgSection">
+                    <img class="image"  alt="Cloud Computing" src="https://edyoda.s3.amazonaws.com/media/blog-images/4.png" />
+                </div>
+                <div class="textSection">
+                    <p class="title">Impact of Cloud Computing in</p>
+                    <div class="authorContainer">
+                        <span class="author">EdYoda</span> | 
+                        <span class="date">24 Aug 2019</span>
+                    </div>
+                    <p class="data">Cloud computing has been rapidly gaining pace in the world of information technology. It has been observed</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="item">
+                <div class="imgSection">
+                    <img class="image" alt="Big Data Analytic" src="https://edyoda.s3.amazonaws.com/media/blog-images/3.png"  />
+                </div>
+                <div class="textSection">
+                    <p class="title">Challenges of Machine Learnin</p>
+                    <div class="authorContainer">
+                        <span class="author">EdYoda</span> |
+                        <span class="date">24 Aug 2019</span>
+                    </div>
+                    <p class="data">Machine Learning is a subset of artificial intelligence which is an important part of computer science. The</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="imgSection">
+                    <img class="image" alt="Cyber Security" src="https://edyoda.s3.amazonaws.com/media/blog-images/5.png"  />
+                </div>
+                <div class="textSection">
+                    <p class="title">Breaking the Myths around</p>
+                    <div class="authorContainer">
+                        <span class="author">EdYoda</span> | 
+                        <span class="date">26 Aug 2019</span>
+                    </div>
+                    <p class="data">Cybersecurity plays an integral role in the process of good business models. But even cybersecurity</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="imgSection">
+                    <img class="image" alt="Data Backup Recovery" src="https://edyoda.s3.amazonaws.com/media/blog-images/7.png" />
+                </div>
+                <div class="textSection">
+                    <p class="title">Importance of Data Backup an</p>
+                    <div class="authorContainer">
+                        <span class="author">EdYoda</span> | 
+                        <span class="date">26 Aug 2019</span>
+                    </div>
+                    <p class="data">A business must always introspect the areas where they lack in order to bring about a positive change in the work</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="item">
+                <div class="imgSection">
+                    <img class="image" alt="What is Web Scraping"  src="https://edyoda.s3.amazonaws.com/media/blog-images/automation-testing-an-overview-2.png"/>
+                </div>
+                <div class="textSection">
+                    <p class="title">What is Web Scraping?</p>
+                    <div class="authorContainer">
+                        <span class="author">EdYoda</span> |
+                        <span class="date">25 Sept 2019</span>
+                    </div>
+                    <p class="data">Simply put, web scraping is one of the tools developers use to gather and analyze information from the</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="imgSection">
+                    <img class="image" alt="ISA" src="https://edyoda.s3.amazonaws.com/media/blog-images/what_is_isa_blog_1.png" />
+                </div>
+                <div class="textSection">
+                    <p class="title">What is Income Share</p>
+                    <div class="authorContainer">
+                        <span class="author">EdYoda</span> | 
+                        <span class="date">14 Oct 2019</span>
+                    </div>
+                    <p class="data">The term Income Share Agreement has been around for a long time since 1955 to be precise. Surprised, eh? It was fir</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="imgSection">
+                    <img class="image"  alt="Practical Machine Learninr with Python & Keras" src="https://edyoda.s3.amazonaws.com/media/blog-images/practical_machine_learning_1.png" />
+                </div>
+                <div class="textSection">
+                    <p class="title">Practical Machine Learning with</p>
+                    <div class="authorContainer">
+                        <span class="author">Daniel Pyrathon</span> | 
+                        <span class="date">16 Oct 2019</span>
+                    </div>
+                    <p class="data">Machine learning is a field of artificial intelligence that uses statistical techniques to give computer systems</p>
+                </div>
+            </div>
+          </div>
+
+        </div>
     </section>
     <!-- footer -->
     <footer> </footer>
