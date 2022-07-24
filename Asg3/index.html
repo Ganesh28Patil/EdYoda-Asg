@@ -1,0 +1,269 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stunning Landing Page | Assignment 2</title>
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            height: 35px;
+            /* border: 2px solid green; */
+            padding: 15px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        nav>div {
+            display: flex;
+            justify-content: space-around;
+            width: 30%;
+            padding: 5px;
+            /* border: 1px solid red; */
+        }
+
+        nav>div>a {
+            color: gray;
+            text-decoration: none;
+            color: gray;
+            padding: 5px;
+        }
+
+        nav>div>a:hover {
+            font-weight: bold;
+            color: black;
+            /* border: 1px solid red; */
+            border-bottom: 2px solid blue;
+        }
+
+        .btn {
+            border: none;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 25px;
+            height: 45px;
+            cursor: pointer;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .navBtn {
+            color: 5243C0;
+            background-color: FFD8DB;
+        }
+
+        .sectionBtn {
+            color: F6F5FB;
+            background-color: 5243C0;
+            margin-right: 10px;
+        }
+
+        main {
+            margin: 30px;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            /* border: 2px solid red; */
+        }
+
+        #heading {
+            font-size: 50px;
+            /* border: 2px solid red; */
+        }
+
+        .blueBox {
+            width: 12px;
+            height: 12px;
+            /* border: 2px solid red; */
+            margin-top: 89px;
+            margin-left: 3px;
+            background-color: 5243C0;
+        }
+
+        .headingDiv {
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            /* border: 5px solid yellow; */
+
+        }
+
+        .headingDiv~p {
+            color: gray;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .btnNxt {
+            display: flex;
+            height: 45px;
+            /* border: 2px solid black; */
+            padding: 10px;
+            /* justify-content: space-around; */
+        }
+
+        .btnNxt>img {
+            margin: 5px;
+            height: 40px;
+            /* border: 2px solid greenyellow; */
+        }
+
+        .sectionTop {
+            /* border: 2px solid blueviolet; */
+            padding: 5px;
+        }
+
+        .sectionBottom {
+            /* border: 2px solid red; */
+            padding: 8px;
+        }
+
+        article {
+            /* border: 2px solid blue; */
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 600px;
+        }
+
+        .card {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            height: 30px;
+            font-weight: bold;
+            /* background-color: #FD6534; */
+            border-radius: 10px;
+            margin: 5px;
+            background-color: #f0f6fd;
+            /* background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%); */
+            box-shadow: #b8bcc1;
+            cursor: pointer;
+
+        }
+
+        .txt {
+            /* border: 1px solid green; */
+            /* padding: 5px; */
+            /* font-size: 15px; */
+            margin-top: 5px;
+            width: 120px;
+
+        }
+
+        .span {
+            width: 25px;
+            height: 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+            /* background-color: rgb(34, 230, 43); */
+
+        }
+
+        .pink {
+            background-color: #FED7DA;
+        }
+
+        .red {
+            background-color: #FD6534;
+        }
+
+        .green {
+            background-color: #9ED095;
+        }
+
+        .yellow {
+            background-color: #FFE4A0;
+        }
+
+        #white {
+            /* background-color: white !important; */
+            background-color: #FFFFFF;
+            border: 1px solid #f0f6fd;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img src="stunning-logo.png" alt="logo" />
+        <div>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Jobs</a>
+        </div>
+        <button class="btn navBtn"> Your Account </button>
+    </nav>
+    <main>
+
+        <article>
+            <section class="sectionTop">
+                <div class="headingDiv">
+                    <span id="heading">Stunning <br> Workplace </span>
+                    <span class="blueBox"> </span>
+                </div>
+                <p>
+                    with Stuning, remote teams can organize projects,<br> manage shifting priorties, and get work done.
+                </p>
+                <div class="btnNxt">
+                    <button class="btn sectionBtn"> New Account </button>
+                    <img src="arrow-up.png" alt="arrow-up"><img
+                        style="border: 1px solid rgb(171, 167, 167); border-radius: 15px;" src="arrow-down.png"
+                        alt="arrow-down">
+                </div>
+            </section>
+            <section class="sectionBottom">
+                <div class="card ">
+                    <img src="tick-gray.png" alt="tick-gray">
+                    <p class="txt">Dmm design</p>
+                    <img src="user-pink.png" alt="user-pink">
+                    <p class="span pink"></p>
+                </div>
+                <div class="card" id="white">
+                    <img src="tick-blue.png" alt="tick-blue">
+                    <p class="txt">Blurr Animation</p>
+                    <img src="user-pink.png" alt="user-pink">
+                    <p class="span red"></p>
+                </div>
+                <div class="card">
+                    <img src="tick-gray.png" alt="tick-gray">
+                    <p class="txt">Illustration</p>
+                    <img src="user-pink.png" alt="user-pink">
+                    <p class="span green"></p>
+                </div>
+                <div class="card">
+                    <img src="tick-gray.png" alt="tick-gray">
+                    <p class="txt">Refunds</p>
+                    <img src="user-pink.png" alt="user-pink">
+                    <p class="span yellow"></p>
+                </div>
+            </section>
+        </article>
+        <aside>
+            <img src="landing-section-image.png" alt="asideImage" />
+        </aside>
+    </main>
+
+</body>
+
+<script>
+    /*
+    Here are the color codes:
+
+    Topbar colors:              Red: #FE5D20      Blue: #8071D0
+    "Your Account" button:      Pink: #FFD8DB     Blue: #A389CC
+    "New Account" button:       Blue: #5243C0     White: #ffffff
+
+    "Dmm design" card:          Pink: #FED7DA  
+    "Blurr Animation" card:     Red: #FD6534
+    "Illustration" card:        Green: #9ED095
+    "Refunds" card:             Yellow: #FFE4A0;
+    */
+</script>
+
+</html>
