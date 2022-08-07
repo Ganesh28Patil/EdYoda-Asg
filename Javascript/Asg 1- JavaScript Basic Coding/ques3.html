@@ -39,7 +39,9 @@ basic arithmetic operations (add, subtract, multiply and divide) using switch ca
     } else {
         window.alert(`${num1}  ${operator}  ${num2} = ${ans}`);
     }
-
+    let h1 = document.createElement("h1")
+    h1.innerText = `${num1}  ${operator}  ${num2} = ${ans}`;
+    document.querySelector(".show").append(h1);
 </script>
 
 </html>
