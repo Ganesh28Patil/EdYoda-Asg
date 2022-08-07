@@ -1,6 +1,7 @@
 
 // Question 4:
-// Write a JavaScript program to input sides of a triangle and check whether a triangle is equilateral, scalene or isosceles triangle using if else.
+// Write a JavaScript program to input sides of a triangle and 
+// check whether a triangle is equilateral, scalene or isosceles triangle using if else.
 // Properties of triangle:
 /*
  ---> A triangle is said Equilateral Triangle, if all its sides are equal. 
@@ -11,4 +12,5 @@
       Then, the triangle is isosceles if either a == b or a == c or b == c.
  ---> A triangle is said Scalene Triangle, if none of its sides are equal.
 */
+
 

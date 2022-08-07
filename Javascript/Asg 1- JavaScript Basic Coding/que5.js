@@ -4,7 +4,8 @@
 // For first 50 units Rs. 0.50/unit
 // For next 100 units Rs. 0.75/unit
 // For next 100 units Rs. 1.20/unit
-// For unit above 250 Rs. 1.50/unit. An additional surcharge of 20% is added to the bill.
+// For unit above 250 Rs. 1.50/unit. 
+// An additional surcharge of 20% is added to the bill.
 // For example, input: 20 units then bill is Rs10
 // Total Units: 300
 // 50 * 0.5 = 25
