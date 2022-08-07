@@ -9,7 +9,7 @@
     var str1 = 'Today is';
     var str2 = '      a beautiful day     ';
     var str3 = ' In Hawaii.     ';
-
+    var Result = 'Today is a beautiful day In Hawaii.'; // Given Result in Question.
     var result = str1 +" "+ str2.trim() +" "+ str3.trim();
     console.log(result); //Today is a beautiful day In Hawaii.
-   
+    console.log(Result == result); // true, it means result matches
