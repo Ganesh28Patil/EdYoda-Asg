@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="show"></div>
+
+</body>
+<script>
+    /* Question 3:
+ Write a JavaScript program to create menu driven calculator that performs 
+basic arithmetic operations (add, subtract, multiply and divide) using switch case.
+ The calculator should input two numbers and an operator: +, -, *, / from the user.
+  It should perform operation according to the operator entered and must take 
+  input in given format.
+  */
+    let num1 = Number(window.prompt("Enter First Number"));
+    let num2 = Number(window.prompt("Enter Second Number"));
+    let operator = window.prompt("Enter any one Operator from + - * / ")
+    // console.log(num1, num2, operator);
+    let ans = ""
+    let flag = false;
+    switch (operator) {
+        case "+": ans = num1 + num2; break;
+        case "-": ans = num1 - num2; break;
+        case "*": ans = num1 * num2; break;
+        case "/": ans = num1 / num2; break;
+        default: flag = true; ans = "Enter correct operator";
+            break;
+    }
+    console.log('ans:', ans)
+    if (flag) {
+        window.alert(ans);
+    } else {
+        window.alert(`${num1}  ${operator}  ${num2} = ${ans}`);
+    }
+
+</script>
+
+</html>
