@@ -1,91 +1,2368 @@
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> EdYoda | HTML & CSS Final Project | Ganesh Patil </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> EdYoda | HTML & CSS Final Project </title>
     <style>
-        /* .bgImg {
+        @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+        p {
+            color: #919197;
+            font-size: 17px;
+            line-height: 25px;
+        }
+
+        #navBar {
+            Position: relative;
+            Height: 91vh;
+            Padding-right: 5%;
+            Padding-left: 5%;
+            Background-color: #c1c3cc;
+            background-image: linear-gradient(76deg, rgba(193, 195, 204, 0.83) 35%, rgba(193, 195, 204, 0.28) 65%), url("https://nuuk-e3eaa.firebaseapp.com/assets/img/slide-2.jpg");
             background-size: cover;
-            background-repeat: no-repeat;
-            opacity: 0.5;
-        } */
-        nav {
-            border: 2px solid red;
-            height: 80px;
         }
 
-        .logo {
-            background-color: E47312;
-            width: fit-content;
-            height: 80px;
-            padding-top: 25px;
-            padding-left: 20px;
-            padding-right: 20px;
-            float: left;
-        }
-
-        #navList {
+        #Nav {
+            margin: 2% auto;
             display: flex;
-            list-style-type: none;
-            justify-content: space-around;
-            /* border: 2px solid blue; */
+            Background-Color: #fff;
+            position: absolute;
+            width: 90%;
+            height: 13%;
+        }
+
+        #logos,
+        #logos2 {
+            padding-right: 35px;
+            padding-left: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            cursor: pointer;
+            font-size: 14px;
+            color: white;
+            text-decoration: none;
+            background-color: #e47312;
+            height: 110px;
+            position: absolute;
+
+        }
+
+        #nuuk-img {
+            width: 90px;
+        }
+
+        #nav-topmenu {
+            position: absolute;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .nav-links {
+            display: inline-block;
+            padding: 31px 14px;
+            text-decoration: none;
+            color: black;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        #home,
+        .nav-links:hover {
+            color: #e47312;
+        }
+
+        #dragdown-icon {
+            width: 9px;
+            height: 9px;
+        }
+
+        #page-dropdown {
+            position: relative;
+        }
+
+        #page-dropdown ul {
+            position: absolute;
+            top: 60px;
+            width: 180%;
+            background-color: white;
+            padding: 0px 5px;
+            list-style: none;
+        }
+
+        #page-dropdown ul li a {
+            display: none;
+        }
+
+        #page-dropdown:hover ul li a {
+            display: block;
+            font-size: 12px;
+            color: grey;
+            font-weight: 600;
+            margin-bottom: 3px;
+            text-decoration: none;
+            padding: 9px 7px;
+            z-index: 1;
+        }
+
+        #page-dropdown:hover ul li a:hover {
+            color: #e47312;
+            background-color: #F1F1F7;
+        }
+
+        #gft,
+        #eng a {
+            width: 150px;
+            height: 13%;
+            box-sizing: border-box;
+            text-decoration: none;
+            background-color: #e47312;
+            color: white;
+            text-align: center;
+            padding: 32px 0px;
+            font-size: 13px;
+        }
+
+        #gft:hover,
+        #eng a:hover {
+            background-color: #E98A38;
+        }
+
+        #eng {
+            position: absolute;
+            width: 100vh;
+        }
+
+        #eng a {
+            height: 35px;
+            padding: 15px 35px;
+            margin-left: -2%;
+            margin-top: px;
+
+        }
+
+        #navBar h1 {
+            color: white;
+            margin-top: 30%;
+            margin-left: 7%;
+            font-size: 66px;
+            line-height: 60px;
+            /* margin-top: 2px; */
+        }
+
+        #navBar p {
+            color: hsla(0, 0%, 100%, 0.7);
+            margin: 5% 0% 7% 7%;
+            font-size: 20px;
+        }
+
+        #media {
+            position: absolute;
+            right: 0;
+            top: 33%;
+            Background-Color: #0a1229;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #media img {
+            width: 15px;
+            height: 15px;
+            padding: 20px;
+            border-bottom: 1px solid hsla(0, 0%, 100%, 0.14);
+
+        }
+
+        #imp {
+            position: absolute;
+            box-sizing: border-box;
+            bottom: -83px;
+            right: 0;
+            Width: 1000px;
+            Padding: 50px 70px 40px 100px;
+            Background-color: #e47312;
+            Background-image: linear-gradient(186deg, #e47312, #ff6361);
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+        }
+
+        #imp div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            Margin-bottom: 2px;
+            color: hsla(0, 0%, 100%, 0.7);
+            Letter-spacing: 1px;
+        }
+
+        #imp div .cnt2 {
+            color: hsla(0, 0%, 100%, 0.7);
+            Letter-spacing: 1px;
+            font-size: 15px;
+            margin: 2px 0px;
+        }
+
+        #imp .count1,
+        #imp #map {
+            color: white;
+            margin: 11px 0px;
+            font-size: 13px;
+            font-weight: 600;
+            Line-height: 20px;
+            Letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        #imp div img {
+            width: 25px;
+            height: 25px;
+
+        }
+
+        #imp div:last-child {
+            width: 250px;
+        }
+
+        #imp #map:hover {
+            cursor: pointer;
+            border-bottom: 2px solid white;
+        }
+
+        #gne {
+            margin-top: 20%;
+            width: 87%;
+            transform: translate(130px, -80px);
+        }
+
+        .mainPart h1 {
+            color: rgba(241, 241, 247, 0.4);
+            font-size: 120px;
+            letter-spacing: 11px;
+            transform: translate(-30px, -80px);
+            position: absolute;
+            z-index: -1;
+        }
+
+        .mainPart div {
+            transform: translate(-20px, 20px);
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+        }
+
+        .mainPart div h2 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 42px;
+            Line-height: 50px;
+            Letter-spacing: 1px;
+        }
+
+        .mainPart div p {
+            color: #919198;
+            font-size: 13px;
+            Letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        #service-cards {
+            display: flex;
+            box-sizing: border-box;
+            margin-top: 90px;
+            left: 5%;
+            width: 90%;
+
+        }
+
+        #service-cards div {
+            width: 35%;
+            padding-right: 5px;
+            margin-bottom: 10px;
+            margin-right: 20px;
+        }
+
+        #service-cards div .service-title {
+            margin-top: 0px;
+            margin-bottom: 10px;
+            color: #121213;
+            font-size: 17px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            line-height: 30px;
+
+        }
+
+        #service-cards div img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+
+        }
+
+        #service-cards div .descripiton {
+            padding-right: 1px;
+            padding-bottom: 10px;
+        }
+
+        #service-cards div .learn-more {
+            margin: 0;
+            color: #919198;
+            box-sizing: border-box;
+            font-size: 13px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .learn-more:hover,
+        .mainPart div p:hover,
+        #client-section #our-services:hover {
+            border-bottom: 3px solid #E47312;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        #apt {
+            margin-top: 15%;
+            display: flex;
+        }
+
+        #apt img {
+            width: 600px;
+            height: 400px;
+        }
+
+        #apt div {
+            position: relative;
+            padding-left: 100px;
+            padding-right: 150px;
             width: 550px;
         }
 
-        .navRight {
+        #apt div h1 {
+            position: absolute;
+            color: rgba(241, 241, 247, 0.4);
+            font-size: 120px;
+            letter-spacing: 11px;
+            transform: translate(-20px, -100px);
+            z-index: -1;
+        }
+
+        #apt div h2 {
+            font-size: 42px;
+            line-height: 50px;
+            letter-spacing: 1px;
+            color: #121213;
+        }
+
+        #apt div p {
+            margin-bottom: 10px;
+        }
+
+        #apt div #meet-team {
+            color: #919198;
+            font-size: 13px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        #env {
             display: flex;
-            margin-left: 480px;
-            height: 100%;
-            align-items: center;
-            /* border: 2px solid green; */
-            /* overflow: auto; */
+            width: 90%;
         }
 
-        .getFreeQ {
-            background-color: rgb(228, 115, 18);
-            color: white;
-            /* padding: 28px; */
-            float: right;
-            height: 40%;
-            padding: 3%;
+        #env div {
+            width: 25%;
+            padding-right: 10%;
+        }
+
+        #env div .numbers {
+            margin-bottom: 10px;
+            color: #e47312;
+            font-size: 60px;
+            line-height: 70px;
+            font-weight: 500;
+        }
+
+        #env div .trst {
+            margin-bottom: 10px;
+        }
+
+        #mill,
+        #team-section,
+        #blog-section {
+            top: 10%;
 
         }
 
-        .getFreeQ:hover {
-            background-color: rgb(247, 134, 53);
+        #mill .mainPart div {
+            transform: translate(60px, 20px);
+            width: 85%;
+        }
+
+        #team-section .mainPart div {
+            transform: translate(70px, 70px);
+            width: 85%;
+        }
+
+        #mill .mainPart h1 {
+            transform: translate(50px, -70px);
+        }
+
+        #team-section .mainPart h1 {
+            transform: translate(50px, -10px);
+        }
+
+        #flex {
+            display: flex;
+        }
+
+        #grp-images {
+            margin: 5% 0% 7% 3%
+        }
+
+        #grp-images div {
+            display: inline-block;
+            position: relative;
+            padding-right: 10px;
+            margin-bottom: 7px;
+        }
+
+        #grp-images div .project {
+            height: 345px;
+            width: 360px;
+        }
+
+        #grp-images div .project :hover {
+            z-index: 1;
             cursor: pointer;
+            background-color: black;
+        }
+
+        #grp-images .images {
+            width: 365px;
+            height: 350px;
+
+        }
+
+        #grp-images .images:hover {
+            opacity: 0.5;
+        }
+
+        #grp-images div .project-buttn {
+            opacity: 0;
+            position: absolute;
+            color: white;
+            top: 38%;
+            left: 40%;
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            text-align: center;
+            padding: 8px;
+            Background-Image: linear-gradient(59deg, #ff6361, #e47312);
+
+        }
+
+        #grp-images div:hover .project-buttn {
+            opacity: 1;
+
+        }
+
+        .view-project {
+            padding-top: 10px;
+            padding-left: 7px;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        #blck {
+            padding: 7% 25%;
+            text-align: center;
+            background-color: #e47312;
+            background-image: linear-gradient(72deg, #e47312, rgba(255, 99, 97, 0.78));
+            margin-top: -50px;
+        }
+
+        #blck #bg-title {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 42px;
+            color: white;
+            text-transform: uppercase;
+            Line-height: 50px;
+            letter-spacing: 1px;
+        }
+
+        #blck p {
+            margin-bottom: 30px;
+            color: hsla(0, 0%, 100%, 0.7);
+            margin-top: 10px;
+            font-size: 20px;
+            Line-height: 26px;
+            font-weight: 300;
+        }
+
+        #blck a {
+            margin-left: 0%;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            padding-bottom: 5px;
+        }
+
+        #blck a:hover {
+            border-bottom: 2px solid white;
+        }
+
+
+
+
+
+        .body {
+            margin: 0px;
+            padding: 0px;
+            background-color: #f7f8fc;
+            height: 400%;
+        }
+
+        .pContainer {
+            width: 100%;
+            height: 500px;
+            margin-top: 50px;
+        }
+
+        .pHeader {
+
+            height: 50px;
+            width: 50%;
+            margin-left: 1%;
+
+
+        }
+
+        .pHeader>p {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            position: relative;
+            z-index: 2;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 42px;
+            line-height: 50px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #000;
+
+        }
+
+        .user {
+            width: 96%;
+            margin-top: 75px;
+            height: 440px;
+            display: flex;
+            gap: 6px;
+            padding-left: 30px;
+        }
+
+        .user1 {
+            background-image: url("https://nuuk-e3eaa.firebaseapp.com/assets/img/team-1.jpg");
+            height: 375px;
+            width: 40%;
+            margin-left: 5px;
+            margin-right: 5px;
+            background-size: cover;
+            width: 25%;
+        }
+
+        .user2 {
+            background-image: url("https://nuuk-e3eaa.firebaseapp.com/assets/img/team-2.jpg");
+            height: 375px;
+            width: 40%;
+            margin-left: 5px;
+            margin-right: 5px;
+            background-size: cover;
+            width: 25%;
+        }
+
+        .user3 {
+            background-image: url("https://nuuk-e3eaa.firebaseapp.com/assets/img/team-3.jpg");
+            height: 375px;
+            width: 40%;
+            margin-left: 5px;
+            margin-right: 5px;
+            background-size: cover;
+            width: 25%;
+        }
+
+        .user4 {
+            background-image: url("https://nuuk-e3eaa.firebaseapp.com/assets/img/team-4.jpg");
+            height: 375px;
+            width: 40%;
+            margin-left: 5px;
+            margin-right: 5px;
+            background-size: cover;
+            width: 25%;
+        }
+
+
+        .main_logo_div {
+            width: 30px;
+            left: 55px;
+            top: -0px;
+            justify-content: center;
+            position: relative;
+            height: 160px;
+            margin-right: 100px;
+            margin: -1px;
+            margin-left: 60%;
+            grid-template-rows: 10px;
+            margin-bottom: -50px;
+            margin-top: -60%;
+            background-color: #e47312;
+            padding-top: 20px;
+            padding-right: 25px;
+            flex-direction: column;
+
+        }
+
+        @media only screen and (max-width: 400px) {
+            body {
+                grid-template-columns: repeat(1fr);
+                grid-template-rows: repeat(1fr);
+            }
+        }
+
+        .logo_div>img {
+            justify-items: center;
+            margin-left: 15px;
+            margin-top: 5px;
+
+            border-bottom: 1px solid hsla(0, 0%, 100%, 0.14);
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: rgba(255, 255, 255, 0.14);
+
+            margin-bottom: 5px;
+        }
+
+        .blur {
+            color: rgba(241, 241, 247, 0.75);
+            position: absolute;
+            left: 40px;
+            top: -150px;
+            font-family: 'Dosis', sans-serif;
+            z-index: 1;
+            margin-top: 297%;
+            font-size: 60px;
+
+            letter-spacing: 10px;
+            text-transform: uppercase;
+        }
+
+        .abs {
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: -121px;
+            padding-top: 90px;
+            padding-bottom: 5px;
+            float: right;
+            margin-right: 65px;
+            text-decoration: none;
+            color: #919198;
+        }
+
+        .test1 {
+            display: flex;
+            margin-top: 35px;
+
+        }
+
+        .width-50 {
+            width: 50%
+        }
+
+        .width-30 {
+            width: 30%
+        }
+
+        .width-70 {
+            width: 70%
+        }
+
+        .os {
+
+            color: #919198;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 15px;
+            margin-left: 0px;
+            padding-bottom: 5px;
+            text-decoration: none;
+
+        }
+
+        .descr {
+            margin-bottom: 10px;
+            font-family: Dosis, sans-serif;
+            color: #919197;
+            font-size: 17px;
+            line-height: 25px;
+        }
+
+        .card {
+            justify-content: center;
+            /* align-items: center; */
+            text-align: center;
+            background-color: #fff;
+            padding: 15px;
+            margin: 40px;
+            background-color: #f6f3f3;
+            margin-top: 90px;
+        }
+
+        .des1 {
+            margin-top: 15px;
+            margin-bottom: 0px;
+            color: #919197;
+        }
+
+        .fa-solid fa-circle-pause {
+            color: #e47312;
+            margin-left: 10px;
+        }
+
+        .sTitle {
+            margin-top: 162px;
+            font-size: 17px;
+            line-height: 30px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding-left: 22%;
+            padding-top: 230px;
+
+        }
+
+        .jTitle {
+            margin-bottom: 0px;
+            color: #bdbdc9;
+            font-size: 16px;
+            padding-left: 21%;
+            margin-top: -3px;
+        }
+
+        .testMon {
+            margin-top: 15%;
+            padding: 5px;
+            padding-left: 100px;
+            padding-right: 100px;
+            margin-top: 25%;
+        }
+
+        .testmon {
+            position: relative;
+            z-index: 2;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 42px;
+            line-height: 50px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .pauseIcon {
+            font-size: 70px !important;
+            color: #e47312;
+            padding: 6px;
+            margin-top: -84px;
+        }
+
+        .usr2 {
+            margin-top: 125px;
+        }
+
+        a:hover {
+
+            text-decoration: underline;
+            text-decoration-color: #e47312;
+
+            text-underline-offset: 5px;
+            text-decoration-thickness: 2px;
+        }
+
+
+        .blur1 {
+            color: rgba(241, 241, 247, 0.75);
+            color: rgba(241, 241, 247, 0.4);
+            position: absolute;
+            /* color: black; */
+            left: 42px;
+
+            top: 730%;
+            font-family: 'Dosis', sans-serif;
+            z-index: 1;
+            /* color: black; */
+            margin-top: 46px;
+            font-size: 58px;
+            /* letter-spacing: 10px; */
+            /* font-weight: 600; */
+            text-transform: uppercase;
+            /* bottom: 66px; */
+            margin-bottom: 89px;
+        }
+
+
+        #blog-section {
+            margin-top: 80%;
+        }
+
+        #blog-section .mainPart h1 {
+            transform: translate(70px, -70px);
+        }
+
+        #blog-section .mainPart div {
+            transform: translate(85px, 10px);
+            width: 85%;
+        }
+
+        #blogposts {
+            display: flex;
+            margin: 5% 0% 0% 5%;
+        }
+
+        .blog-cards {
+            margin-right: 20px;
+            position: relative;
+            cursor: pointer;
+            left: -40px;
+        }
+
+        .blog-cards .dates {
+            position: absolute;
+            top: 0;
+            right: 0;
+            Width: 50px;
+
+        }
+
+        .dates .date-number {
+            Height: 40px;
+            Background-image: linear-gradient(45deg, #ff6361, #e47312);
+            color: #fff;
+            font-size: 23px;
+            letter-spacing: 3px;
+            font-weight: 400;
+            text-align: center;
+            padding-top: 12px;
+            padding-left: 2px;
+        }
+
+        .dates .month {
+            Height: 30px;
+            Background-color: #fff;
+            color: #9d9da5;
+            font-size: 15px;
+            font-weight: 600;
+            padding-top: 10px;
+            padding-left: 13px;
+            Letter-spacing: 2px;
+        }
+
+        .blog-cards .blog-pics {
+            width: 380px;
+            height: 250px;
+        }
+
+        .blog-story {
+            padding-top: 10px;
+            width: 380px;
+            height: 200px;
+            transform: translateY(-10px);
+            position: absolute;
+
+            background-image: linear-gradient(158deg, #e47312, #ff6361);
+        }
+
+        .blog-story p {
+            margin: 0;
+        }
+
+        .blog-story .blog-title {
+            margin: 15px 0px 20px 35px;
+            font-size: 21px;
+            letter-spacing: 3px;
+            line-height: 26px;
+            font-weight: 500;
+            color: white;
+        }
+
+        .blog-story .blog-para {
+            margin: 10px 20px 15px 35px;
+            color: hsla(0, 0%, 100%, 0.7);
+            font-size: 17px;
+            padding-right: 20px;
+            line-height: 25px;
+        }
+
+        .blog-story .blog-read {
+            color: #fff;
+            margin-left: 35px;
+            font-size: 13px;
+            width: 70px;
+            letter-spacing: 1px;
+            border-bottom: 3px solid #ee7f25;
+
+        }
+
+        .blog-story .blog-read:hover {
+            border-bottom: 3px solid hsla(0, 0%, 100%, 0.7);
+            transition: 0.4s;
+        }
+
+        #logo-section {
+            margin-top: 27%;
+            display: flex;
+            z-index: 3;
+            padding: 70px 100px;
+            Background-image: linear-gradient(56deg, #e47312, #ff6361);
+        }
+
+        #logo-section #trusted-cmpnies {
+            color: #fff;
+            font-size: 15px;
+            line-height: 20px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transform: translate(-50px, 10px);
+            width: 30%;
+            text-align: center;
+        }
+
+        #logo-section #logo-imgs {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+
+        }
+
+        #logo-imgs .logos {
+            width: 90px;
+            height: 70px;
+            text-align: center;
+            margin: 0;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
+
+        #logo1 {
+            background-image: url('https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-1w.png');
+            background-size: 100px;
+            margin-right: 100px;
+        }
+
+        #logo2 {
+            background-image: url('https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-2w.png');
+            background-size: 100px;
+            margin-right: 100px;
+        }
+
+        #logo3 {
+            background-image: url('https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-3w.png');
+            background-size: 100px;
+            margin-right: 100px;
+        }
+
+        #logo4 {
+            background-image: url('https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-4w.png');
+            background-size: 100px;
+            margin-right: 100px;
+        }
+
+        #logo5 {
+            background-image: url('https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-5w.png');
+            background-size: 100px;
+            margin-right: 100px;
+        }
+
+        #footer-section {
+            background-color: #0A1229;
+            color: white;
+        }
+
+        #footer-options {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 70px 150px 70px;
+        }
+
+        #apt-nuuk {
+            padding-right: 20px;
+        }
+
+        .title-lines {
+            display: flex;
+            align-items: center;
+        }
+
+        .title-lines .title {
+            color: #fff;
+            font-size: 15px;
+            line-height: 20px;
+            font-weight: 600;
+            margin-right: 40px;
+            letter-spacing: 1px;
+        }
+
+        .title-lines .line {
+            background-color: #E47312;
+            width: 200px;
+            height: 2px;
+        }
+
+        #apt-para {
+            font-size: 17px;
+            line-height: 25px;
+            color: #fff;
+            width: 250px;
+            margin-bottom: 40px;
+        }
+
+        #services #services-options {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-links,
+        .contact-heading p {
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-top: 20px;
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            width: fit-content;
+            padding-bottom: 2px;
+        }
+
+        .footer-links:hover {
+            border-bottom: 2px solid white;
+        }
+
+        .contact-heading {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-heading img {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+        }
+
+        .contact-heading p {
+            cursor: default;
+        }
+
+        .contact-3sections .contact-secndline {
+            margin: 0;
+            padding-left: 34px;
+            color: hsla(0, 0%, 100%, 0.7);
+            font-size: 17px;
+            line-height: 25px;
+        }
+
+        #footer-section {
+            position: relative;
+        }
+
+        #footer-section #logos2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        @media(max-width:990px) {
+            body {
+                margin: 0;
+                width: 100%;
+
+            }
+
+            /* navBar */
+            #Nav {
+                margin: 0;
+                width: 100%;
+                height: 60px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+
+            #logos {
+                height: 60px;
+            }
+
+            .hamburger-line {
+                height: 2px;
+                position: absolute;
+                background-color: #000;
+                left: unset;
+                top: 50%;
+                right: 0;
+                width: 30px;
+            }
+
+            .hamburger-line:first-of-type {
+                transform: translate(-40%, -4px);
+            }
+
+            .hamburger-line:last-of-type {
+                transform: translate(-40%, 5px);
+            }
+
+            #eng h1 {
+                font-size: 50px;
+            }
+
+            #imp {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+            #media {
+                top: 196px;
+            }
+
+            #nav-topmenu {
+                display: none;
+            }
+
+            /* gne */
+            #gne {
+                margin: 0%;
+                padding-top: 10%;
+                width: 100%;
+                transform: translate(10px, 100px);
+            }
+
+            .mainPart h1 {
+                font-size: 80px;
+            }
+
+            .mainPart div {
+                width: 90%;
+                padding-left: 4%;
+            }
+
+            .mainPart div h2 {
+                font-size: 32px;
+                line-height: 40px;
+                letter-spacing: 3px;
+            }
+
+            .mainPart div p {
+                letter-spacing: 2px;
+            }
+
+            #gne .mainPart h1 {
+                transform: translate(27px, -50px);
+            }
+
+            #gne .mainPart div h2 {
+                transform: translate(16px, -9px);
+            }
+
+            #service-cards {
+                margin: 10% 0% 0% 0%;
+                padding-left: 6%;
+                width: 100%;
+            }
+
+            #service-cards div {
+                width: 50%;
+                margin-right: 35px;
+            }
+
+            #apt {
+                flex-direction: column;
+            }
+
+            #apt img {
+                padding-left: 5%;
+                width: 85%;
+                height: 50%;
+            }
+
+            #apt div {
+                width: 90%;
+                padding-left: 5%;
+                padding-right: 0%;
+            }
+
+            #apt div h1 {
+                font-size: 80px;
+                transform: translate(-10px, 40px);
+            }
+
+            #apt div h2 {
+                font-size: 32px;
+                line-height: 40px;
+                letter-spacing: 2px;
+                transform: translate(5px, 80px);
+            }
+
+            #apt div p:first-of-type {
+                padding-top: 12%;
+                padding-bottom: 1%;
+            }
+
+            #env {
+                padding-left: 5%;
+                width: 95%;
+            }
+
+            #mill .mainPart div {
+                transform: translate(20px, -10px);
+            }
+
+            #grp-images {
+                margin: 10 auto;
+                width: 90%;
+                padding-left: 7%;
+            }
+
+            #grp-images div .project {
+                width: 200px;
+                height: 220px;
+            }
+
+            #grp-images .images {
+                width: 210px;
+                height: 220px;
+            }
+
+            #blck {
+                padding: 7% 5%;
+            }
+
+            #blck #bg-title {
+                font-size: 32px;
+                line-height: 40px;
+            }
+
+            #team-section .mainPart h1 {
+                transform: translate(70px, 70px);
+            }
+
+            #team-section .mainPart div {
+                transform: translate(50px, 140px);
+            }
+
+            #team-profiles {
+                margin-top: 20%;
+                padding-left: 5%;
+
+            }
+
+            .profile-cards {
+                width: 50%;
+                height: 300px;
+                margin-right: 15px;
+            }
+
+            .profile-photo {
+                width: 100%;
+                height: 200px;
+                margin-bottom: 15px;
+                margin-right: 0px;
+            }
+
+            .profile-cards h2 {
+                margin-top: 1px;
+                margin-left: 20px;
+            }
+
+            .profile-cards p {
+                margin: 0;
+                margin-left: 20px;
+            }
+
+            .socialprofile-ids {
+                padding: 1% 1%;
+            }
+
+            #client-section {
+                margin-left: 3%;
+                position: relative;
+                margin-top: 10%;
+            }
+
+            #client-section div h1 {
+                font-size: 80px;
+                transform: translate(30px, 0px);
+            }
+
+            #client-section div h2 {
+                font-size: 32px;
+            }
+
+            #client-section div #clients-para {
+                width: 100%;
+            }
+
+            #first-column {
+                transform: translate(20px, 350px);
+                position: absolute;
+            }
+
+            #second-column {
+                transform: translate(450px, -190px);
+                position: absolute;
+            }
+
+            #first-column .reviews,
+            #second-column .reviews {
+                width: 80%;
+                height: 35vh;
+            }
+
+            .client-info .client-name {
+                width: 95%;
+                transform: translate(0px, 10px);
+                margin-bottom: 10px;
+            }
+
+            .client-info .client-prof {
+                width: 95%;
+                transform: translate(0px, 30px);
+            }
+
+            .client-info .client-review {
+                transform: translate(0px, 45px);
+            }
+
+            #blog-section .mainPart h1 {
+                transform: translate(70px, 10px);
+            }
+
+            #blog-section .mainPart div {
+                transform: translate(40px, 70px);
+            }
+
+            #blogposts {
+                margin-top: 10%;
+            }
+
+            .blog-cards {
+                width: 40%;
+            }
+
+            .blog-cards .blog-pics {
+                width: 100%;
+            }
+
+            .blog-story {
+                width: 100%;
+            }
+
+            .blog-story .blog-title {
+                margin: 5px 0px 10px 25px;
+                font-size: 19px;
+                line-height: 26px;
+                width: fit-content;
+            }
+
+            .blog-story .blog-para {
+                margin: 10px 0px 15px 25px;
+            }
+
+            #logo-section {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #logo-section #trusted-cmpnies {
+                width: 112%;
+
+            }
+
+            .title-lines .title {
+                margin-right: 10px;
+                width: 100%;
+            }
+
+            /* .title-lines .line{
+          transform: translate(-50px,0px);
+          width:200px;
+      } */
+
+        }
+
+        @media(max-width:855px) {
+
+            #first-column,
+            #second-column {
+                width: 35%;
+            }
+
+            #second-column {
+                transform: translate(350px, -150px);
+            }
+
+            .client-info .client-name {
+                font-size: 13px;
+                transform: translate(-5px, -10px);
+            }
+
+            .client-info .client-prof {
+                font-size: 13px;
+                transform: translate(-9px, 0px);
+            }
+
+            .client-info .client-review {
+                font-size: 13px;
+                width: 80%;
+                transform: translate(20px, 0px);
+            }
+
+            #first-column .reviews,
+            #second-column .reviews {
+                width: 250px;
+                height: 35vh;
+            }
+
+            .blog-cards {
+                height: 350px;
+                width: 250px;
+                margin-right: 2%;
+                margin-right: 50px;
+                position: relative;
+                cursor: pointer;
+                left: -80px;
+            }
+
+            .blog-pics {
+                width: 250px;
+                height: 200px;
+            }
+
+            .blog-story {
+                height: 220px;
+                font-size: 10px;
+            }
+
+            #footer-options {
+                padding: 10px;
+                height: 70vh;
+                position: relative;
+            }
+
+            #apt-nuuk,
+            #services,
+            #contact-us {
+                position: absolute;
+
+                width: 30%;
+            }
+
+            .title-lines .title {
+                font-size: 13px;
+            }
+
+            /* .title-lines .line{
+           width:120px;transform: translateX(-80px);
+       } */
+            #apt-nuuk {
+                transform: translate(-220px, 0px);
+            }
+
+            #apt-para {
+                font-size: 11px;
+                width: 150px;
+            }
+
+            #services {
+                transform: translate(20px, 0px);
+            }
+
+            #contact-us {
+                transform: translate(230px, 0px);
+            }
+
+            #contact-us .contact-3sections {
+                height: 75%;
+                width: fit-content;
+            }
+
+            .footer-links,
+            .contact-heading p {
+                font-size: 11px;
+            }
+
+            .contact-3sections .contact-secndline {
+                height: 20px;
+                font-size: 12px;
+            }
+
+            #footer-section #logos2 {
+                padding: 5px 20px;
+                height: 60px;
+                left: 7%;
+                bottom: 7%;
+
+            }
+        }
+
+        @media(max-width:760px) {
+            #imp div .cnt2 {
+                width: 230px;
+                text-align: center;
+            }
+
+            .mainPart h1 {
+                font-size: 60px;
+            }
+
+            .mainPart div h2 {
+                font-size: 26px;
+            }
+
+            #service-cards {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #service-cards div .descripiton {
+                width: 630px;
+                margin-bottom: 0px;
+            }
+
+            #service-cards div .learn-more {
+                margin-bottom: 40px;
+            }
+
+            #apt div h1 {
+                font-size: 60px;
+            }
+
+            #apt div h2 {
+                font-size: 26px;
+            }
+
+            #env {
+                flex-direction: column;
+            }
+
+            #env div .trst {
+                width: 580px;
+            }
+
+            #grp-images div {
+                width: 90%;
+                height: 80vh;
+                padding-right: 0px;
+            }
+
+            #grp-images div .project {
+                width: 100%;
+            }
+
+            #grp-images .images {
+                width: 100%;
+                height: 70vh;
+            }
+
+            #team-profiles {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .profile-cards {
+                width: 100%;
+                height: 400px;
+                margin-bottom: 40px;
+            }
+
+            .profile-photo {
+                height: 300px;
+            }
+
+            .socialprofile-ids {
+                padding: 0%;
+                width: 40px;
+                height: 150px;
+                justify-content: space-evenly;
+            }
+
+            .socialprofile-ids img {
+                padding: 5px;
+                height: 15%;
+                padding-left: 10px;
+            }
+
+            #first-column {
+                width: 90%;
+                transform: translate(50px, 400px);
+            }
+
+            #second-column {
+                width: 90%;
+                transform: translate(50px, 400px);
+            }
+
+            #first-column .reviews,
+            #second-column .reviews {
+                width: 100%;
+            }
+
+            .client-info .client-name {
+                font-size: 15px;
+                transform: translateX(4px);
+            }
+
+            .client-info .client-prof {
+                font-size: 15px;
+                transform: translateX(-15px);
+            }
+
+            .client-info .client-review {
+                font-size: 17px;
+                transform: translate(20px, 20px);
+                width: 90%;
+            }
+
+            #blogposts {
+                display: flex;
+                flex-direction: column;
+                padding-right: 20px;
+            }
+
+            .blog-cards {
+                width: 100%;
+                height: 100vh;
+            }
+
+            .blog-cards .blog-pics {
+                height: 60%;
+            }
+
+            .blog-story {
+                height: 170px
+            }
+
+            .blog-story .blog-read {
+                transform: translateX(-10px);
+            }
+
+            #logo-section {
+                margin-top: 0px;
+            }
+
+            #logo-section #trusted-cmpnies {
+                margin-bottom: 20px;
+            }
+
+            #logo-section #logo-imgs {
+                width: 900px;
+                height: 150px;
+                flex-wrap: wrap;
+                transform: translate(-150px, 0px);
+                justify-content: flex-start;
+            }
+
+            #logo-imgs .logos {
+                width: 270px;
+                height: 80px;
+            }
+
+            #footer-section {
+                height: 150vh;
+            }
+
+            #footer-options {
+                flex-direction: column;
+            }
+
+            #apt-nuuk {
+                transform: translate(30px, -90px);
+                width: 90%;
+                margin-bottom: 70px;
+            }
+
+            #services {
+                transform: translate(30px, 90px);
+                width: 90%;
+            }
+
+            #contact-us {
+                transform: translate(30px, 390px);
+                width: 90%;
+            }
+
+            .title-lines .title {
+                font-size: 15px;
+                width: fit-content;
+            }
+
+
+            #apt-para {
+                font-size: 17px;
+                width: 90%;
+                margin-bottom: 20px;
+
+            }
+        }
+
+        #about-para {
+            color: #fff;
+        }
+
+        .footer-links,
+        .contact-heading p {
+            font-size: 13px;
+        }
+
+        .contact-heading {
+            margin-left: 20px;
+        }
+
+        .contact-3sections .contact-secndline {
+            font-size: 17px;
+            padding-left: 55px;
+        }
+
+
+        body {
+            margin: 2% 2% 0% 2%;
+            font-family: 'Dosis', sans-serif;
+            color: #121213;
+            font-size: 14px;
+            Line-height: 20px;
+            padding: 0%;
+            overflow-x: hidden;
         }
     </style>
 </head>
 
 <body>
-    <!-- <div class="bgImg">
-        <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/slide-2.jpg" alt="">
-    </div> -->
-    <nav>
-        <div class="logo">
-            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-white.png" width="90" alt="">
+    <div id="navBar">
+        <div id="Nav">
+            <a href="./index.html" id="logos"><img id="nuuk-img"
+                    src="https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-white.png" alt="logos" /></a>
+
+
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <nav id="nav-topmenu">
+                <a href="./index.html" class="nav-links" id="home">HOME</a>
+                <a href="./index.html" class="nav-links">PROJECTS</a>
+                <a href="./index.html" class="nav-links">descripiton</a>
+                <a href="./index.html" class="nav-links">SERVICES</a>
+                <a href="./index.html" class="nav-links">BLOG</a>
+                <nav id="page-dropdown"> <a href="./index.html" class="nav-links">PAGES<img id="dragdown-icon"
+                            src="https://nuuk-e3eaa.firebaseapp.com/assets/img/sort-down.svg" alt="drag"></a>
+                    <ul>
+                        <li><a href="./index.html">404 ERROR NOT FOUND</a></li>
+                        <li><a href="./index.html">PROTECTED PAGE</a></li>
+                        <li><a href="./index.html">STYLE GUIDE</a></li>
+                        <li><a href="./index.html">LICENSING</a></li>
+                    </ul>
+                </nav>
+                <a href="./index.html" id="gft">GET FREE QUOTE</a>
+            </nav>
         </div>
-        <div class="navRight">
-            <list>
-                <ul id="navList">
-                    <li>HOME</li>
-                    <li>PROJECT</li>
-                    <li>ABOUT</li>
-                    <li>SERVICES</li>
-                    <li>BLOG</li>
-                    <li>PAGES</li>
-                </ul>
-            </list>
-            <div class="getFreeQ gfqNav">
-                GET FREE QUOTE
+        <div id="eng">
+            <h1>YOU DREAM. WE CREATE.</h1>
+            <p>We turn your ideas to reality.we don't stop until you're satisfied.</p>
+            <a href="./index.html">GET FREE QUOTE</a>
+        </div>
+
+        <div id="imp">
+
+            <div><img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/phone.svg" alt="phone" />
+                <p class="count1">Phone Number</p>
+                <p class="cnt2">1-800-506-266</p>
+                <p class="cnt2">1-100-777-800</p>
+            </div>
+
+            <div><img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/mail.svg" alt="mail" />
+                <p class="count1">contact</p>
+                <p class="cnt2">contact@nuuk.com</p>
+                <p class="cnt2">info@nuuk.com</p>
+            </div>
+
+            <div><img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/clock.svg" alt="clock" />
+                <p class="count1">opening times</p>
+                <p class="cnt2">
+                    Mon-Sat 8.00-17:30, Sunday-Closed</p>
+                <p id="map">find on map</p>
             </div>
         </div>
-    </nav>
-    <p>YOU DREAM. WE CREATE.</p>
-    <p>We turn your ideas to reality, we don't stop until you're satisfied.</p>
+
+
+
+
+
+
+        <div id="media">
+            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/facebook-logo.png" alt="facebook" />
+            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/twitter-logo.png" alt="twitter" />
+            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/linkedin-logo.png" alt="linkedln" />
+            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/instagram-logo.png" alt="instagram" />
+        </div>
+
+
+
+    </div>
+    <div id="gne">
+        <div class="mainPart">
+            <h1>SERVICES</h1>
+
+            <div>
+                <h2>OUR SPECIALIZATION</h2>
+                <p>VIEW ALL SERVICES</p>
+            </div>
+        </div>
+
+        <div id="service-cards">
+            <div><img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/brickwall.svg" />
+                <p class="service-title">RENOVATION</p>
+                <p class="descripiton">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique.</p>
+                <p class="learn-more">LEARN MORE</p>
+            </div>
+
+
+            <div><img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/set-square.svg" />
+                <p class="service-title">ARCHITECTURE</p>
+                <p class="descripiton">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
+                    in eros
+                    elementum tristique.</p>
+                <p class="learn-more">LEARN MORE</p>
+            </div>
+            <div><img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/toolbox.svg" />
+                <p class="service-title">CONSTRUCTION</p>
+                <p class="descripiton">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
+                    in eros
+                    elementum tristique.</p>
+                <p class="learn-more">LEARN MORE</p>
+            </div>
+            <div><img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/paint-roller.svg" />
+                <p class="service-title">FINANCIAL RESULTS</p>
+                <p class="descripiton">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
+                    in eros
+                    elementum tristique.</p>
+                <p class="learn-more">LEARN MORE</p>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div id="apt">
+            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/serv-1.jpg" alt="working" />
+            <div>
+                <h1>ABOUT</h1>
+                <h2>WHO WE ARE</h2>
+                <p>Based on collective work and shared knowledge, Nuuk aims to favor dialogue and debate,
+                    to transform individual knowledge into increased creative potential.</p>
+                <p>Our studio is a architecture practice based in NY and Paris.
+                    Today, it includes 150 architects, urban planners, landscape and interior designers of 25 different
+                    nationalities. The company principle of Architecture-Studio is the collective conception.
+                    From the very beginning, the practice has believed in the virtues of exchange, crossing ideas,
+                    common effort,
+                    shred knowledge.</p>
+                <p id="meet-team">MEET THE TEAM</p>
+            </div>
+
+        </div>
+        <div id="env">
+            <div>
+                <p class="numbers">170</p>
+                <p class="trst">
+                    Employer with over 10 years of experience</p>
+            </div>
+            <div>
+                <p class="numbers">10</p>
+                <p class="trst">Years experience in construction
+                    industries</p>
+            </div>
+            <div>
+                <p class="numbers">690</p>
+                <p class="trst">Residential premises completed in
+                    2019</p>
+            </div>
+            <div>
+                <p class="numbers">71</p>
+                <p class="trst">Milion dollar value on investments
+
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div id="mill">
+
+        <div class="mainPart">
+            <h1>PROJECTS</h1>
+            <div>
+                <h2>OUR WORK</h2>
+                <p>VIEW ALL WORKS</p>
+            </div>
+        </div>
+
+        <div id="grp-images">
+
+
+
+
+
+            <div id="flex">
+
+                <div>
+
+                    <div class="project">
+                        <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-1.jpg" alt="images" class="images" />
+                    </div>
+
+                    <div class="project-buttn">
+                        <div class="view-project">view<br> project</div>
+                    </div>
+                </div>
+
+
+                <div>
+
+                    <div class="project">
+                        <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-4.jpg" alt="images" class="images" />
+                    </div>
+                    <div class="project-buttn">
+                        <div class="view-project">view<br> project</div>
+                    </div>
+                </div>
+
+
+
+                <div>
+                    <div class="project">
+                        <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-3.jpg" alt="images" class="images" />
+                    </div>
+                    <div class="project-buttn">
+                        <div class="view-project">view<br> project</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+                <div class="project"><img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-6.jpg" alt="images"
+                        class="images" /></div>
+                <div class="project-buttn">
+                    <div class="view-project">view<br> project</div>
+                </div>
+            </div>
+
+
+            <div>
+                <div class="project"><img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-5.jpg" alt="images"
+                        class="images" /></div>
+                <div class="project-buttn">
+                    <div class="view-project">view<br> project</div>
+                </div>
+            </div>
+
+
+            <div>
+
+                <div class="project"><img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-2.jpg" alt="images"
+                        class="images" /></div>
+                <div class="project-buttn">
+                    <div class="view-project">view<br> project</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div id="blck">
+            <h1 id="bg-title">Let's make something great together</h1>
+            <p>Get in touch with us and send some basic info for a quick quote</p>
+            <a href="./index.html">GET FREE QUOTE</a>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    </head>
+
+    <body>
+        <div class="blur">
+            <h1>team</h1>
+        </div>
+        <div class="pContainer">
+
+            <div class="pHeader">
+                <p>PROFESSIONALS</p>
+            </div>
+            <a class="abs" href="#">ABOUT US</a>
+
+            <div class="user">
+                <div class="user1">
+                    <!-- <img
+             src="https://nuuk-e3eaa.firebaseapp.com/assets/img/team-1.jpg"
+             height="350px"
+             width="100%"
+           /> -->
+                    <h1 class="sTitle">PHILIP BROWER</h1>
+                    <p class="jTitle">Managing Director</p>
+                    <div class="main_logo_div">
+                        <div class="logo_div">
+                            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/facebook-logo.png" height="30px"
+                                width="30px" />
+                            <br />
+                            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/twitter-logo.png" height="30px"
+                                width="30px" />
+                            <br />
+                            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/linkedin-logo.png" height="30px"
+                                width="30px" />
+                        </div>
+                    </div>
+                </div>
+                <div class="user2">
+                    <!-- <img
+             src="https://nuuk-e3eaa.firebaseapp.com/assets/img/team-2.jpg"
+             height="350px"
+             width="100%"
+           /> -->
+                    <h1 class="sTitle">JOHN WICK</h1>
+                    <p class="jTitle">Managing Director</p>
+                    <div class="main_logo_div">
+                        <div class="logo_div">
+                            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/facebook-logo.png" height="30px"
+                                width="30px" />
+                            <br />
+                            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/twitter-logo.png" height="30px"
+                                width="30px" />
+                            <br />
+                            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/linkedin-logo.png" height="30px"
+                                width="30px" />
+                        </div>
+                    </div>
+                </div>
+                <div class="user3">
+                    <!-- <img
+             src="https://nuuk-e3eaa.firebaseapp.com/assets/img/team-3.jpg"
+             height="350px"
+             width="100%"
+           /> -->
+                    <h1 class="sTitle">JIMMY MCGILL</h1>
+                    <p class="jTitle">Managing Director</p>
+                    <div class="main_logo_div">
+                        <div class="logo_div">
+                            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/facebook-logo.png" height="30px"
+                                width="30px" />
+                            <br />
+                            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/twitter-logo.png" height="30px"
+                                width="30px" />
+                            <br />
+                            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/linkedin-logo.png" height="30px"
+                                width="30px" />
+                        </div>
+                    </div>
+                </div>
+                <div class="user4">
+                    <!-- <img
+             src="https://nuuk-e3eaa.firebaseapp.com/assets/img/team-4.jpg"
+             height="350px"
+             width="100%"
+           /> -->
+                    <h1 class="sTitle">SARA CONNOR</h1>
+                    <p class="jTitle">Managing Director</p>
+                    <div class="main_logo_div">
+                        <div class="logo_div">
+                            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/facebook-logo.png" height="30px"
+                                width="30px" />
+                            <br />
+                            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/twitter-logo.png" height="30px"
+                                width="30px" />
+                            <br />
+                            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/linkedin-logo.png" height="30px"
+                                width="30px" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blur1">
+                <h1>CLIENTS</h1>
+            </div>
+            <div class="test1">
+                <div class="width-30 testMon">
+                    <h1 class="testmon">TESTIMONIALS</h1>
+
+                    <p class="descr">
+                        Aenean ut eros et nisl sagittis vestibulum. Fusce neque. Praesent
+                        blandit laoreet nibh. Morbi mollis tellus ac sapien.
+                    </p>
+                    <a class="os" href="#">OUR SERVICES</a>
+                </div>
+                <div class="width-70 test1">
+                    <div class="width-50">
+                        <div class="card">
+                            <i class="pauseIcon fa fa-pause-circle"></i>
+
+                            <h4>SARA WILLIAM</h4>
+                            <p style="color: #bdbdc9; font-size: 16px">CEO at Webflow</p>
+                            <p class="des1">
+                                "Duis cursus, mi quis viverra ornare, eros dolor interdum nulla,
+                                ut commodo diam libero vitae erat. Aenean faucibus nibh et justo
+                                cursus id rutrum lorem imperdiet"
+                            </p>
+                        </div>
+                        <div class="card">
+                            <i class="pauseIcon fa fa-pause-circle"></i>
+
+                            <h4>JOHN JUNIOR</h4>
+                            <p style="color: #bdbdc9; font-size: 16px">Menager at Complexx</p>
+                            <p class="des1">
+
+
+                                "Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Cras varius. Etiam sit
+                                amet orci eget eros faucibus tincidunt. Fusce a quam"
+                            </p>
+                        </div>
+                    </div>
+                    <div class="usr2 width-50">
+                        <div class="card">
+                            <i class="pauseIcon fa fa-pause-circle"></i>
+
+                            <h4> RAVEN DURGAN</h4>
+                            <p style="color: #bdbdc9; font-size: 16px">Architect at Group</p>
+                            <p class="des1">
+                                "Aliquam eu nunc. Cras dapibus. Vestibulum turpis sem, aliquet eget, lobortis
+                                pellentesque, rutrum eu, nisl"
+
+
+                            </p>
+                        </div>
+                        <div class="card">
+                            <i class="pauseIcon fa fa-pause-circle"></i>
+
+                            <h4>SAMI TYPO</h4>
+                            <p style="color: #bdbdc9; font-size: 16px">SEO at Balfin</p>
+                            <p class="des1">
+                                "Vestibulum fringilla pede sit amet augue. Morbi ac felis. Ut a nisl id ante tempus
+                                hendrerit"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+
+    </html>
+
+
+
+    <div id="blog-section">
+        <div class="mainPart">
+            <h1>BLOGS</h1>
+            <div>
+                <h2>LATEST NEWS</h2>
+                <p>VIEW BLOG</p>
+            </div>
+        </div>
+
+        <div id="blogposts">
+            <div class="blog-cards">
+                <img class="blog-pics" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/port-1.jpg" />
+                <div class="dates">
+                    <div class="date-number">11</div>
+                    <div class="month">OCT</div>
+                </div>
+
+                <div class="blog-story">
+                    <p class="blog-title">BLOGPOST 1</p>
+                    <p class="blog-para">
+                        Service and providing potential clients and customers
+                        with testimonials is one of the best ways to market.
+                    </p>
+                    <p class="blog-read">READ MORE</p>
+                </div>
+            </div>
+
+            <div class="blog-cards">
+                <img class="blog-pics" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/port-2.jpg" />
+                <div class="dates">
+                    <div class="date-number">11</div>
+                    <div class="month">OCT</div>
+                </div>
+                <div class="blog-story">
+                    <p class="blog-title">BLOGPOST 2</p>
+                    <p class="blog-para">
+                        Service and providing potential clients and customers
+                        with testimonials is one of the best ways to market.
+                    </p>
+                    <p class="blog-read">READ MORE</p>
+                </div>
+            </div>
+            <div class="blog-cards">
+                <img class="blog-pics" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/port-3.jpg" />
+                <div class="dates">
+                    <div class="date-number">11</div>
+                    <div class="month">OCT</div>
+                </div>
+                <div class="blog-story">
+                    <p class="blog-title">BLOGPOST 3</p>
+                    <p class="blog-para">
+                        Service and providing potential clients and customers
+                        with testimonials is one of the best ways to market.
+                    </p>
+                    <p class="blog-read">READ MORE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="logo-section">
+        <p id="trusted-cmpnies">TRUSTED BY COMPANIES</p>
+        <div id="logo-imgs">
+            <p class="logos" id="logo1"></p>
+            <p class="logos" id="logo2"></p>
+            <p class="logos" id="logo3"></p>
+            <p class="logos" id="logo4"></p>
+            <p class="logos" id="logo5"></p>
+        </div>
+    </div>
+
+
+    <div id=footer-section>
+        <div id=footer-options>
+            <div id="about-nuuk">
+                <div class="title-lines">
+                    <p class="title">ABOUT NUUK</p>
+                    <div class="line"></div>
+                </div>
+                <p id="about-para">Based on collective work and shared </br>knowledge, Nuuk aims to favor</br> dialogue
+                    and debate,
+                    to transform </br>individual knowledge into increased </br>creative potential.</br>
+                </p>
+                <a class="footer-links" href="./index.html">FIND ON MAP</a>
+            </div>
+            <div id="services">
+                <div class="title-lines">
+                    <p class="title">SERVICES</p>
+                    <div class="line"></div>
+                </div>
+                <nav id="services-options">
+                    <a class="footer-links" href="./index.html">FINANCIAL RESULTS</a>
+                    <a class="footer-links" href="./index.html">CONSTRUCTION</a>
+                    <a class="footer-links" href="./index.html">ARCHITECTURE</a>
+                    <a class="footer-links" href="./index.html">RENOVATION</a>
+                </nav>
+            </div>
+            <div id="contact-us">
+                <div class="title-lines">
+                    <p class="title">CONTACT-US</p>
+                    <div class="line"></div>
+                </div>
+                <div class="contact-3sections">
+                    <div class="contact-heading"> <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/phone.svg" />
+                        <p>PHONE NUMBER</p>
+                    </div>
+                    <p class="contact-secndline">1-800-506-266</p>
+                </div>
+                <div class="contact-3sections">
+                    <div class="contact-heading"> <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/clock.svg" />
+                        <p>OPENING TIMES</p>
+                    </div>
+                    <p class="contact-secndline">Mon - Sat 8.00 - 17:30,Sunday - Closed</p>
+                </div>
+                <div class="contact-3sections">
+                    <div class="contact-heading"> <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/mail.svg" />
+                        <p>CONTACT</p>
+                    </div>
+                    <p class="contact-secndline">contact@nuuk.com</p>
+                </div>
+            </div>
+        </div>
+        <a href="./index.html" id="logos2"><img id="nuuk-img"
+                src="https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-white.png" alt="logos" /></a>
+    </div>
+
 </body>
 
 </html>
