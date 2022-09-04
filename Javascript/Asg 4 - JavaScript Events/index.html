@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asg 4 | JS Events</title>
+</head>
+<style>
+    * {
+        font-family: "Montserrat", sans-serif;
+        line-height: normal;
+    }
+
+    .outBox {
+        display: flex;
+        /* border: 3px solid blue; */
+        justify-content: space-around;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-around; */
+        /* border: 2px solid green; */
+        width: 55%;
+        height: 600px;
+        padding: 1%;
+    }
+
+    .left {
+        /* border: 2px solid red; */
+        width: 50%;
+        padding: 5px;
+    }
+
+    .left>img {
+        margin-left: 5%;
+        height: 550px;
+        width: 450px;
+        background-size: cover;
+    }
+
+    #price>span {
+        color: teal;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div class="outBox">
+        <div class="left" id="previewImg"> <img src="" alt="Preview" id="showImg"> </div>
+        <div class="right" id="data"> </div>
+    </div>
+
+</body>
+<script>
+    var productData = {
+        "id": "1",
+        "name": "Men Navy Blue Solid Sweatshirt",
+        "preview": "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg",
+        "photos": [
+            "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg",
+            "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/efc3d5b9-1bb3-4427-af53-7acae7af98951541402833591-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-2.jpg",
+            "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/c7e58861-3431-4189-9903-9880f5eebd181541402833566-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-3.jpg",
+            "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/66490b64-32de-44b4-a6e4-fe36f1c040051541402833548-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-4.jpg",
+            "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/957be784-7c5d-4e90-ab9f-0928015b22891541402833645-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-5.jpg"
+        ],
+        "description": "Navy solid sweatshirt with patchwork, has a round neck, long sleeves, straight hem",
+        "size": [
+            1,
+            1,
+            0,
+            1,
+            0
+        ],
+        "isAccessory": false,
+        "brand": "United Colors of Benetton",
+        "price": 2599
+    }
+
+    console.log('productData:', productData);
+    let keys = Object.keys(productData);
+    let values = Object.values(productData);
+    // console.log("Keys", Object.keys(productData));
+    // console.log("Values", Object.values(productData));
+    console.log('keys:', keys);
+    console.log('values:', values);
+    // console.log('values:', values[3][0]);
+
+    function display(productData) {
+
+        let showData = document.getElementById("data");
+        let name = document.createElement("p");
+        name.id = "name";
+        name.textContent = productData.name;
+        name.style.fontSize = "38px"
+        name.style.marginTop = "1px"
+        name.style.marginBottom = "30px"
+        let brand = document.createElement("p");
+        brand.id = "brand";
+        brand.textContent = productData.brand;
+        brand.style.fontSize = "20px"
+        brand.style.marginTop = "1px"
+        brand.style.marginBottom = "20px"
+
+        let price = document.createElement("p");
+        price.id = "price";
+        // let rate = document.createElement("span");
+        // rate.id = "rate";
+
+        // rate.textContent = " Price :  Rs " + productData.price;
+        price.innerHTML = `Price :   Rs <span> ${productData.price}<span>`;
+        price.style.marginTop = "1px";
+        price.style.marginBottom = "20px";
+        // price.textContent = " Price :  Rs " + `${Object.values(rate)}`;
+        // price.append(rate);
+        let heading1 = document.createElement("p");
+        let heading2 = document.createElement("p");
+        heading1.id = "heading1";
+        heading2.id = "heading2";
+        heading1.style.marginTop = "0px";
+        heading1.style.marginBottom = "15px";
+        heading2.style.marginTop = "1px";
+        heading2.style.marginBottom = "20px";
+        heading1.textContent = "Description"
+        let description = document.createElement("p");
+        description.id = "description";
+        description.textContent = productData.description;
+        description.style.fontSize = "13px"
+        description.style.color = "gray"
+        description.style.marginTop = "1px"
+        description.style.marginBottom = "30px";
+
+        heading2.textContent = "Product Preview";
+        let previewFrame = document.createElement("div");
+        previewFrame.id = "previewFrame";
+        previewFrame.style.display = "flex";
+        previewFrame.style.justifyContent = "space-between";
+        // previewFrame.style.border = "2px solid yellow"
+        previewFrame.style.padding = "2px";
+        // previewFrame.style.width = "90%"
+        previewFrame.style.marginBottom = "30px";
+
+
+        for (let i = 0; i < productData.photos.length; i++) {
+            let previewBox = document.createElement("div");
+            previewBox.id = `box${i + 1}`;
+            previewBox.className = "noColor";
+
+            // previewBox.style.border = "1px solid teal"
+            previewBox.style.padding = "1px";
+            previewBox.style.borderRadius = "3px";
+            let previewImg = document.createElement("img");
+            previewImg.id = `img${i + 1}`;
+            previewImg.style.cursor = "pointer";
+            previewImg.style.backgroundSize = "cover";
+            let imgId = previewImg.id;
+            previewImg.addEventListener("click", showPreview);
+            previewImg.style.height = "100px"
+            previewImg.style.width = "90px";
+            previewImg.src = productData.photos[i];
+            previewBox.append(previewImg);
+            previewFrame.append(previewBox);
+        }
+
+
+        let AddToCart = document.createElement("button");
+        AddToCart.textContent = "Add to Cart"
+        AddToCart.style.width = "20%";
+        AddToCart.style.borderRadius = "5px";
+        AddToCart.style.padding = "10px";
+        AddToCart.style.background = "teal";
+        AddToCart.style.border = "none";
+        AddToCart.style.color = "white";
+        AddToCart.style.cursor = "pointer";
+        showData.append(name, brand, price, heading1, description, heading2, previewFrame, AddToCart);
+        document.getElementById("box1").style.border = "1.5px solid teal";
+    }
+    display(productData);
+
+    function showPreview(event) {
+        // console.log('event:', event.target.src);
+
+        let fullSizeImgFrame = document.getElementById("previewImg");
+        let fullImg = document.getElementById("showImg");
+        fullImg.src = event.target.src;
+        fullImg.alt = "full Image Preview";
+        fullSizeImgFrame.append(fullImg);
+        // console.log(event, event.path[1], event.path[1].id, event.path[1].className);
+        let box = document.getElementsByClassName("noColor");
+        for (let i = 0; i < box.length; i++) {
+            // console.log(`box[${i}]`, box[i]);
+            box[i].setAttribute("style", "border:none");
+            box[i].setAttribute("padding", "1px");
+        }
+        document.getElementById(event.path[1].id).style.border = "1.5px solid teal";
+        document.getElementById(event.path[1].id).style.borderRadius = "3px";
+        document.getElementById(event.path[1].id).style.padding = "2px";
+
+
+    }
+    // console.log("DOC", document.getElementById("showImg"))
+    // console.log("DOC", document.getElementById("showImg").src = values[3][0]);
+    document.getElementById("showImg").src = values[3][0];
+
+</script>
+
+</html>
