@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(84, 195, 239);
+            /* width: 100%; */
+            margin: 0 0;
+        }
+
+        .frame {
+            color: rgb(217, 215, 68);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-weight: bold;
+            font-family: 'Caveat Brush', cursive;
+            font-size: 40px;
+            text-shadow: 3px 3px rgb(17, 16, 16);
+        }
+
+        .container {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 900;
+            font-size: 23px;
+            /* border: 2px solid white; */
+            background-color: rgb(43, 50, 82);
+            color: rgb(217, 215, 68);
+            width: fit-content;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            border-radius: 25px;
+        }
+
+        #submit {
+            margin-top: 13px;
+            background-color: rgb(217, 215, 68);
+            padding: 10px;
+            width: 120px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 35%;
+        }
+
+        #scoreCard {
+            background-color: aliceblue;
+            color: black;
+            border-radius: 10px;
+            width: fit-content;
+            height: 100px;
+            width: 130px;
+            text-align: center;
+            padding-top: 30px;
+            margin-left: 46%;
+            position: fixed;
+            padding-bottom: 15px;
+
+        }
+
+        #quiz {
+            /* border: 2px solid red; */
+            padding: 20px;
+        }
+
+        hr {
+            margin-top: 20px;
+            background-color: rgb(217, 215, 68);
+            /* margin-bottom: 2px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="frame">
+        <h1>The Quiz App</h1>
+        <div class="container">
+
+            <div id="scoreCard">
+                <p>Score</p>
+                <p id="marks"></p>
+            </div>
+            <form onsubmit="getData(event)" id="quiz">
+                <div id="qBox">
+
+                </div>
+                <input id="submit" type="submit" value="Submit">
+                <!-- <button> Submit</button> -->
+            </form>
+
+        </div>
+    </div>
+</body>
+<script>
+    // quiz data
+    const quizData = [
+        {
+            id: 1,
+            answer: 3,
+            question: "Which was not one of Voldemort's Horcruxes?",
+            options: [
+                "Harry",
+                "Nagini",
+                "Helga's Diadem",
+                "Tom Riddle's Diary"
+            ]
+        },
+        {
+            id: 2,
+            answer: 1,
+            question: "Which of these are not one of Hagrid's many pets?",
+            options: [
+                "Grawp",
+                "Fluffy",
+                "Aragog",
+                "Noberta"
+            ]
+        },
+        {
+            id: 3,
+            answer: 3,
+            question: "Which class did Severus Snape always want to teach?",
+            options: [
+                "Potions",
+                "Charms",
+                "Defense Against Dark Arts",
+                "Transfiguration"
+            ]
+        },
+        {
+            id: 4,
+            answer: 3,
+            question: "Which Hogwarts house did Moaning Myrtle belong in?",
+            options: [
+                "Gryffindor",
+                "Slytherin",
+                "Ravenclaw",
+                "Hufflepuff"
+            ]
+        },
+        {
+            id: 5,
+            answer: 2,
+            question: "What class did Neville end up teaching at Hogwarts?",
+            options: [
+                "Astronomy",
+                "Herbology",
+                "Charms",
+                "Muggle Studies"
+            ]
+        }
+    ];
+
+    let qBox = document.getElementById("qBox");
+    // let form = document.createElement('form');
+    // form.id = "form";
+    // console.log('form:', form)
+
+    let formBox = document.getElementById("form");
+    for (let i = 0; i < quizData.length; i++) {
+        let question = document.createElement("p");
+        question.textContent = `Q.${quizData[i].id} ${quizData[i].question} `;
+
+        // console.log(question);
+        qBox.append(question);
+        // formBox.append(question);
+        let options = document.createElement('div');
+        for (let j = 0; j < quizData[i].options.length; j++) {
+            let inputTag = document.createElement('input');
+            inputTag.type = "radio";
+            inputTag.id = (quizData[i].options[j]).toLowerCase();
+            inputTag.value = quizData[i].options[j];
+            inputTag.name = `question_${i}`;
+            inputTag.className = "selected";
+            inputTag.style.cursor = "pointer";
+            // console.log(' inputTag.name:', inputTag.name)
+            // console.log('inpsutTag.id:', inputTag.id);
+            let label = document.createElement("label");
+            label.textContent = quizData[i].options[j];
+            label.setAttribute("for", (quizData[i].options[j]).toLowerCase());
+            label.style.cursor = "pointer";
+            let br = document.createElement("br");
+            // qBox.append(inputTag, label, br);
+            options.id = `box_${i}`;
+            options.append(inputTag, label, br);
+            qBox.append(options);
+        }
+        let hr = document.createElement("hr");
+
+        qBox.append(hr);
+
+
+    }
+    let scoreCard = document.getElementById("scoreCard");
+    let marks = document.getElementById("marks");
+    function getData(event) {
+        let answer = [];
+        event.preventDefault();
+        // console.log("I am working");
+        let chk = document.querySelectorAll(".selected");
+        // console.log('chk:', chk);
+        for (let ele of chk) {
+            // console.log(ele.checked);
+            if (ele.checked) {
+                // console.log(ele.value);
+                answer.push(ele.value);
+            }
+        }
+        console.log(answer);
+
+        // console.log(quizData[0].answer, quizData[0].options[quizData[0].answer - 1])
+        let score = 0;
+        for (let i = 0; i < quizData.length; i++) {
+            if (answer.includes(quizData[i].options[quizData[i].answer - 1])) score++;
+        }
+        console.log(score);
+        marks.textContent = `${score}/5`;
+        scoreCard.append(marks);
+    }
+
+
+
+
+
+
+</script>
+
+</html>
