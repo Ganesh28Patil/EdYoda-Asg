@@ -35,10 +35,6 @@ for (let i = 0; i < data.length - 1; i++) {
     data[i + 1].count = flag;
     sol.push(data[i + 1]);
   }
-  if (i === data.length - 1) {
-    data[i].count = flag;
-    sol.push(data[i]);
-  }
 }
 
 console.log(sol);
