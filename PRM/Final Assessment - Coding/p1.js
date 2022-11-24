@@ -36,6 +36,3 @@ let newSet = new Set(arr);
 let sol = [...newSet];
 console.log("sol:", sol);
 console.log(...newSet);
-for (let i = 0; i < arr.length; i++) {
-  stack.add(arr[i]);
-}
